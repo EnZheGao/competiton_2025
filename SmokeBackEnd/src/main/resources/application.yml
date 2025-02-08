@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: SmokeBackEnd
+
+  servlet:
+    multipart:
+      #最大单个文件大小
+      max-file-size: 10MB
+      #最大请求文件大小
+      max-request-size: 100MB
+
+  #配置数据库连接信息
+  datasource:
+    url: jdbc:mysql://localhost:3306/smoke
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+
+#mybatis相关设置
+mybatis:
+  configuration:
+    #配置mybatis日志输出（输出到控制台）
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #开启驼峰命名映射开关
+    map-underscore-to-camel-case: true
+
+
+  #指定XML映射配置文件的位置
+
+
+#阿里云OSS
